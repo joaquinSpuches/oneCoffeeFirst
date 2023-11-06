@@ -18,16 +18,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 55px;
-    padding-right: 55px;
+
     
 }
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    width: 100vw;
     justify-content: space-around;
+}
+.divcontainer{
+    padding-top: 221px;
+    width:100vw
 }
 nav{
     
@@ -63,7 +66,7 @@ h1{
    
     width: 226px;
     max-width: 100vw;
-    position: absolute;
+    position: fixed;
     left: 0;
     padding-left: 55px;
     
@@ -172,4 +175,17 @@ h1{
     align-items: center;
     height: 19px;
 
+}
+.recipe{
+    border-bottom: 0.5px solid #132336 ;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+.descripicionRecipe{
+    width: 150px; /* Ancho máximo del contenedor, ajusta según tus necesidades */
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden; /* Oculta el texto que desborda el contenedor */
+    text-overflow: ellipsis;
 }

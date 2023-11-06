@@ -15,7 +15,8 @@ function App() {
   const handleClickInfo = ()=>{
     setLogoActivo(false)
   }
-  const [navActive, setNavActive] =useState(true)
+
+  const [navActive, setNavActive] =useState(false)
   return (
     <Router>
       <div  className='container'>
@@ -24,11 +25,11 @@ function App() {
         <Info logoActivo={logoActivo} setLogoActivo={setLogoActivo} />
 
         <Routes>
-          <Route path="/recipes/" element={<Recipes />} />
+          <Route path="/recipes/" element={<Recipes setNavActive={setNavActive}/>} />
           <Route path="/Shop/" element={<Shop />} />
-
         
-          <Route path="/recipes/:terminoBusqueda" element={<Recipes />} />
+        
+       
         </Routes>
       </div>
     </Router>
