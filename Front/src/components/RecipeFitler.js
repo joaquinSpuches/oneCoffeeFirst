@@ -1,26 +1,24 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import axios from  'axios';
 
-function RecipeFilter() {
-  
+function RecipeFilter({data}) {
+  if (data === false) {
+    return <p>Cargando...</p>;
+  }
 
 
   return (
     <div className='recipeFilter'>
       <ul>
-        <Link>All</Link>
-        <Link>Aeropress</Link>
-        <Link>Espresso</Link>
-        <Link>Moka Pot</Link>
-        <Link>French Press</Link>
-        <Link>V60</Link>
-        <Link>Filter</Link>
-        
-        
+      {data === false && <p style={{textAlign:'center', fontWeight:'700', paddingTop:'150px'}}>Cargando...</p>}
 
-      </ul>
+{data.map(data => 
+   <Link key={data.id}  >
+       {data.categoria}
+          
+   </Link>)}
+   </ul>
    
     </div>
   );

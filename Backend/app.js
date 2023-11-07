@@ -30,8 +30,8 @@ app.get('/recetas_cafe', (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log('El servidor está escuchando en el puerto 3001');
+app.listen(3001, '0.0.0.0', () => {
+  console.log('Servidor Node.js y Express iniciado en el puerto 3001');
 });
 
 

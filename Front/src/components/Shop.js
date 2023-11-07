@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import ShopFilter from './ShopFilter';
 
-import { useNavigate, useParams } from 'react-router-dom';
-import axios from  'axios';
-import RecipeFilter from './RecipeFitler';
 
-function Shop() {
+
+function Shop(props) {
+  useEffect(()=>{
+    props.setNavActive(true)
+  })
   
-
 
   return (
     <div>
       <h1 className='h1Recipe'>SHOP</h1>
-      <RecipeFilter />    
+      <ShopFilter />    
     </div>
   );
 }

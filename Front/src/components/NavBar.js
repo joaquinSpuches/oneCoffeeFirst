@@ -17,17 +17,17 @@ function NavBar({ setLogoActivo, logoActivo, setNavActive, navActive }) {
         <nav  className={classMenu} >
         <ul>
           <li>
-            <Link onClick={handleClickNav} to="/recipes" className='nav-marcado'>RECIPES</Link>
+            <Link onClick={handleClickNav} to="/recipes" className='nav-marcado'aria-label="Recipes" >RECIPES</Link>
           </li>
           
           <li>
-            <Link onClick={handleClickNav} to="/Shop">SHOP</Link>
+            <Link onClick={handleClickNav} to="/Shop" aria-label='Shop' >SHOP</Link>
           </li>
           <li>
-            <Link onClick={handleClickInfo} to="/">INFO</Link>
+            <Link onClick={handleClickInfo} to="/" aria-label='Info'>INFO</Link>
           </li>
           <li>
-            <Link to="/contact" className='nav-marcado'> CONTACT</Link>
+            <Link to="/contact" className='nav-marcado' aria-label='Contact'> CONTACT</Link>
           </li>
         </ul>
       </nav>

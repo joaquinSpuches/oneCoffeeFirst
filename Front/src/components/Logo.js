@@ -10,7 +10,7 @@ export default function Logo({logoActivo, setLogoActivo, setNavActive, navActive
       };
     return(
         <Link to="/" className='nav-marcado'>
-        < img id='logo'className={claseLogo} onClick={handleClickInfo } src={logo}/>
+        < img alt='logo' id='logo'className={claseLogo} onClick={handleClickInfo } src={logo}/>
         </Link>
     )
 };
