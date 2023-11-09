@@ -1,15 +1,15 @@
 import React, {useState,useEffect} from 'react';
 
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
-import Recipes from './components/Recipes'; // Importa el componente Recipes
+import Recipes from './components/Recipes/Recipes'; // Importa el componente Recipes
 import axios from 'axios';
 import Home from './components/Home'; // Importa el componente Home
 import NavBar from './components/NavBar';
 import Logo from './components/Logo'
 import Info from './components/Info';
-import Shop from './components/Shop';
-import Recipe from './components/Recipe';
-import RecipesIndex from './components/RecipesIndex';
+import Shop from './components/Shop/Shop';
+import Recipe from './components/Recipes/Recipe';
+import RecipesIndex from './components/Recipes/RecipesIndex';
 import './style.css'
 
 
