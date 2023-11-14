@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import RecipeFilter from './RecipeFitler';
 import { Link, Outlet } from 'react-router-dom';
+import Search from './Search';
 
 function Recipes(props) {
 
@@ -13,7 +14,8 @@ function Recipes(props) {
   return (
     <div className='divcontainer'>
      <Link to='/recipes' > <h1 className='h1Recipe'>RECIPES</h1> </Link>
-      <RecipeFilter data={props.data}  />   
+      <RecipeFilter />   
+      <Search />
       <Outlet/>
       
     

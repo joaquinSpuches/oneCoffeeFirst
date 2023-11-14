@@ -3,8 +3,8 @@ const mysql = require('mysql');
 const db = mysql.createConnection({
   host: 'localhost', // Cambia esto por la dirección de tu servidor MySQL
   port: '3306',
-  user: 'root', // Cambia esto por tu nombre de usuario
-  password: 'mysqlrootpass1234', // Cambia esto por tu contraseña
+  user: 'joaki', // Cambia esto por tu nombre de usuario
+  password: 'myrootpass1234', // Cambia esto por tu contraseña
   database: 'onecoffeefirst' // Cambia esto por el nombre de tu base de datos
 });
 

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 
-function Home() {
+function Home({setNavActive, setLogoActivo}) {
+  useEffect(()=>{
 
+    setNavActive(false)
+  })
   return (
     <div>
 

@@ -1,37 +1,38 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
 
-function ShopFilter({data}) {
-//   if (data === false) {
-//     return <p>Cargando...</p>;
-//   }
+function ShopFilter({dataShop}) {
 
-// console.log(data);
+  const [data,setData] = useState()
+useEffect(() => {
+  axios.get('http://192.168.0.10:3001/categorias').then((response)=>{
+    setData(response.data)
+  })
+  .catch(e=>{
+    console.error('error al obtener datos de categorias:',e);;
+  })
+}, [])
+  if (data === undefined) {
+  
+    return <p>Cargando...</p>;
+  }else{
   return (
-    <div   className='recipeFilter'>
-        <ul>
-        <Link> All</Link>
-        <Link> Origin</Link>
-        <Link> Blend</Link>
-        <Link> Accesories</Link>
-        <Link> Coffee Machines</Link>
-        </ul>
-    </div>
-//     <div className='ShopFilter'>
-//       <ul>
-//       {data == false && <p style={{textAlign:'center', fontWeight:'700', paddingTop:'150px'}}>Cargando...</p>}
-
-// {data.map(data => 
-//    <Link  >
-//        {data.categoria}
+    <div className='recipeFilter'>
+      <ul>
+    
+      <Link to='/recipes'>All</Link>
+      {data.map(data => 
+      <Link key={data.categori_id} to={`category/${data.nombre_categoria}`} >
+       {data.nombre_categoria}
           
-//    </Link>)}
-//    </ul>
+      </Link>)}
+   </ul>
    
-//     </div>
-  );
+    </div>
+  );}
 }
 
-export default ShopFilter;
+export default ShopFilter

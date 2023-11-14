@@ -49,7 +49,7 @@ body {
     justify-content: space-around;
 }
 .divcontainer{
-    padding-top: 181px;
+    padding-top: 131px;
     width:100vw
 }
 nav{
@@ -95,6 +95,27 @@ h1{
     
     
     
+    
+}
+.searchBar{
+   
+   
+}
+.searchBar input{
+    bottom:1vh;
+    width:auto;
+    padding-left: 30px;
+    background-color: transparent;
+
+    border-width: 0.25px;
+    border-left-width: 0px;
+    border-radius: 0;
+    border-right: 0;
+    left:-1px;
+    right: -1px;
+    border-color: #132336;
+    animation: mymove 3s ease-  out;
+    
 }
 .logo{
     top: 156px;
@@ -102,7 +123,7 @@ h1{
 }
 .logoinfo{
     position: absolute;
-    top: 40px;
+    top: 0px;
     transition:top 0.3s ease-out;
 
 }
@@ -167,7 +188,7 @@ h1{
 .h1Recipe{
     position:fixed;
     font-family: 'helvetica-35';
-    top: 89px;
+    top: 50px;
     left:0;
     padding-left: 30px;
     font-size: 1.952em;
@@ -186,7 +207,8 @@ h1{
 }
 .recipeFilter{
     position: fixed;
-    top: 160px;
+    top: 110px;
+    mix-blend-mode:multiply;
     left: -1px;
     max-width: 100%;
     min-width: 100%;
@@ -260,4 +282,41 @@ h1{
 }
 .recipeIndex{
     animation: mymove .5s ease ;
+}
+.shopIndex{
+    animation: mymove .5s ease ;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-wrap: wrap;
+
+}
+.product{
+    
+    
+    box-sizing: border-box;
+    border: 0.5px solid #132336;
+    height:auto
+}
+.product img{
+    height: auto;
+    width: 100%;
+
+}
+.product h1{
+    text-align: center;
+    margin:0;
+    font-size: 1em;
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden; /* Oculta el texto que desborda el contenedor */
+    text-overflow: ellipsis;
+    font-family: 'steiner-regular';
+
+}
+
+.productInfo{
+    background-color: #132336;
+    color: #fff;
+    mix-blend-mode:multiply;
+    padding: 10px;
 }

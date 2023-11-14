@@ -1,27 +1,38 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function RecipeFilter({data}) {
-  if (data === false) {
+
+function RecipeFilter() {
+
+  const [data,setData] = useState()
+useEffect(() => {
+  axios.get('http://192.168.0.10:3001/categorias').then((response)=>{
+    setData(response.data)
+  })
+  .catch(e=>{
+    console.error('error al obtener datos de categorias:',e);;
+  })
+}, [])
+  if (data === undefined) {
+  
     return <p>Cargando...</p>;
-  }
-
-
+  }else{
   return (
     <div className='recipeFilter'>
       <ul>
-      {data === false && <p style={{textAlign:'center', fontWeight:'700', paddingTop:'150px'}}>Cargando...</p>}
-
-{data.map(data => 
-   <Link key={data.id}  >
-       {data.categoria}
+    
+      <Link to='/recipes'>All</Link>
+      {data.map(data => 
+      <Link key={data.categori_id} to={`category/${data.nombre_categoria}`} >
+       {data.nombre_categoria}
           
-   </Link>)}
+      </Link>)}
    </ul>
    
     </div>
-  );
+  );}
 }
 
 export default RecipeFilter;

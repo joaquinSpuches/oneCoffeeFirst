@@ -29,6 +29,31 @@ app.get('/recetas_cafe', (req, res) => {
     }
   });
 });
+app.get('/categorias', (req, res) => {
+  db.query('SELECT * FROM categorias', (err, results) => {
+    if (err) {
+      console.error('Error al realizar la consulta: ' + err.message);
+      res.status(500).send('Error en el servidor');
+    } else {
+
+      res.json(results);
+    
+    }
+  });
+});
+app.get('/shop', (req, res) => {
+  db.query('SELECT * FROM shop', (err, results) => {
+    if (err) {
+      console.error('Error al realizar la consulta: ' + err.message);
+      res.status(500).send('Error en el servidor');
+    } else {
+
+      res.json(results);
+    
+    }
+  });
+});
+
 
 app.listen(3001, '0.0.0.0', () => {
   console.log('Servidor Node.js y Express iniciado en el puerto 3001');

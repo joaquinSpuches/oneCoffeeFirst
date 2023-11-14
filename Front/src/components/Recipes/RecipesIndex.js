@@ -5,7 +5,7 @@ import axios from "axios"
 export default function RecipesIndex({setNavActive}) {
    
   const [data, setData]=useState([])
-  const urlServer = 'http://localhost:3001/recetas_cafe'
+  const urlServer = 'http://192.168.0.10:3001/recetas_cafe'
    
     useEffect(() =>{
       axios.get(`${urlServer}`).then((response) =>{
