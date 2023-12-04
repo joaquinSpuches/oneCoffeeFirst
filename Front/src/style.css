@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 
     
 }
@@ -102,20 +103,24 @@ h1{
    
 }
 .searchBar input{
-    bottom:1vh;
+    bottom:5%;
     width:auto;
     padding-left: 30px;
     background-color: transparent;
-
-    border-width: 0.25px;
-    border-left-width: 0px;
+    height: 26px;
+    border-width: 1px;
+    
     border-radius: 0;
-    border-right: 0;
-    left:-1px;
-    right: -1px;
+    text-align: end;
+    left:30px;
+    right: 30px;
     border-color: #132336;
     animation: mymove 3s ease-  out;
     
+}
+.searchBar input::placeholder{
+    color: #132336;
+    opacity: 1;
 }
 .logo{
     top: 156px;
@@ -201,10 +206,7 @@ h1{
       white-space: nowrap;
 }
 
-@keyframes mymove { 
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
+
 .recipeFilter{
     position: fixed;
     top: 110px;
@@ -212,8 +214,8 @@ h1{
     left: -1px;
     max-width: 100%;
     min-width: 100%;
-    border: 0.5px #132336 solid ;
-    height: 19px;
+    border: 1px #132336 solid ;
+    height: 26px;
     /* overflow-x: auto; Permite el desbordamiento horizontal */
     white-space: nowrap; /* Evita el ajuste de línea */
     
@@ -224,7 +226,9 @@ h1{
     display: flex;
     margin: 0;
     align-items: center;
-    height: 19px;
+    height: 26px;
+    overflow-x: scroll;
+
 
 }
 .recipe{
@@ -320,3 +324,56 @@ h1{
     mix-blend-mode:multiply;
     padding: 10px;
 }
+.product-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-image{
+    animation: product-image .6s ease ;
+    width: 100%;
+    position: fixed;
+
+}
+.product-description{
+    background-color: #132336;
+    height: 80vh;
+    width: 100vw;
+    top: 60vh;
+    left: 0;
+    right: 0;
+    position: absolute;
+    animation: product-description .3s ease ;
+    z-index: 1;
+    color: #ECDCC8;
+    
+}
+
+.product-description h1{
+    font-family: 'steiner-light';
+    padding-left: 30px;
+
+}
+.product-description p{
+    color: #ECDCC8;
+    padding-left: 30px;
+}
+@keyframes mymove { 
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+@keyframes product-description { 
+    from {opacity: 0;
+    top:80vh;}
+    to {opacity: 1;
+    top:60vh}
+  }
+@keyframes product-image { 
+    from {opacity: 0;
+    
+}
+    to {opacity: 1;
+    
+}
+
+  }

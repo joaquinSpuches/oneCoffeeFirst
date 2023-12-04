@@ -8,7 +8,7 @@ function ShopFilter({dataShop}) {
 
   const [data,setData] = useState()
 useEffect(() => {
-  axios.get('http://192.168.0.10:3001/categorias').then((response)=>{
+  axios.get('http://192.168.0.10:3001/categorias_shop').then((response)=>{
     setData(response.data)
   })
   .catch(e=>{
@@ -23,7 +23,7 @@ useEffect(() => {
     <div className='recipeFilter'>
       <ul>
     
-      <Link to='/recipes'>All</Link>
+      <Link to='/shop'>All</Link>
       {data.map(data => 
       <Link key={data.categori_id} to={`category/${data.nombre_categoria}`} >
        {data.nombre_categoria}

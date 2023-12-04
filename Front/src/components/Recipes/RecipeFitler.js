@@ -8,7 +8,7 @@ function RecipeFilter() {
 
   const [data,setData] = useState()
 useEffect(() => {
-  axios.get('http://192.168.0.10:3001/categorias').then((response)=>{
+  axios.get('http://192.168.0.10:3001/categorias_recetas').then((response)=>{
     setData(response.data)
   })
   .catch(e=>{

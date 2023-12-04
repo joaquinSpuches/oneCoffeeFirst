@@ -29,8 +29,20 @@ app.get('/recetas_cafe', (req, res) => {
     }
   });
 });
-app.get('/categorias', (req, res) => {
-  db.query('SELECT * FROM categorias', (err, results) => {
+app.get('/categorias_shop', (req, res) => {
+  db.query('SELECT * FROM categorias_shop', (err, results) => {
+    if (err) {
+      console.error('Error al realizar la consulta: ' + err.message);
+      res.status(500).send('Error en el servidor');
+    } else {
+
+      res.json(results);
+    
+    }
+  });
+});
+app.get('/categorias_recetas', (req, res) => {
+  db.query('SELECT * FROM categorias_recetas', (err, results) => {
     if (err) {
       console.error('Error al realizar la consulta: ' + err.message);
       res.status(500).send('Error en el servidor');
