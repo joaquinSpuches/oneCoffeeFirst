@@ -13,6 +13,7 @@ import ProductType from './components/Shop/ProductType';
 import Recipe from './components/Recipes/Recipe';
 import Categories from './components/Recipes/Categories'
 import RecipesIndex from './components/Recipes/RecipesIndex';
+import DarkModeToggle from './components/DarkModeToggle';
 import './style.css'
 
 
@@ -52,7 +53,7 @@ function App() {
       <div  className='container'>
         <Logo navActive={navActive} setNavActive={setNavActive} logoActivo={logoActivo} setLogoActivo={setLogoActivo}  />
         <NavBar navActive={navActive} setNavActive={setNavActive} setLogoActivo={setLogoActivo} logoActivo={logoActivo}/>
-        
+        <DarkModeToggle />
         <Info logoActivo={logoActivo} setLogoActivo={setLogoActivo} />
 
         <Routes>
