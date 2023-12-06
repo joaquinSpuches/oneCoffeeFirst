@@ -53,7 +53,7 @@ function App() {
       <div  className='container'>
         <Logo navActive={navActive} setNavActive={setNavActive} logoActivo={logoActivo} setLogoActivo={setLogoActivo}  />
         <NavBar navActive={navActive} setNavActive={setNavActive} setLogoActivo={setLogoActivo} logoActivo={logoActivo}/>
-        <DarkModeToggle />
+        {/* <DarkModeToggle /> */}
         <Info logoActivo={logoActivo} setLogoActivo={setLogoActivo} />
 
         <Routes>
